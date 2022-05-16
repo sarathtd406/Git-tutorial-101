@@ -1,8 +1,7 @@
 ## Welcome Git Handson Excercise
 
-You can use the [editor on GitHub](https://github.com/sarathtd406/Git-tutorial-101/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-**Install Git**
+### Install Git
 
 First, you can verify whether Git is already pre-installed on your local machine by running below command.
 
@@ -14,7 +13,7 @@ This command shows you the current version installed on your local machine.
 
 If no command found, you install Git on your local machine from the website [Git Download](https://git-scm.com/downloads) and then try the above command.
 
-**Configure Git**
+### Configure Git
 
 Set local configuration variables. Your username and email address. Git will use this information to identify who made specific changes to files.
 
@@ -24,7 +23,7 @@ git config --global user.email "YOUR_ID@EXAMPLE.COM"
 git config --list
 ```
 
-**Create and Initialize a Project in Git**
+### Create and Initialize a Project
 
 create a project directory "project101"
 ```
@@ -50,7 +49,7 @@ ls -la
 ```
 .git is important sub-directory which stores all the information of repository, tracks all the files & history of a repository. If we remove the directory all the project history will be lost.
 
-**Check the status of our project**
+### Check the status of our project
 
 ```
 git status
