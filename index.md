@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to Git and GitHub setup guide
 
 You can use the [editor on GitHub](https://github.com/sarathtd406/Git-tutorial-101/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
