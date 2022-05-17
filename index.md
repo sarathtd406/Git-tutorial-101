@@ -426,6 +426,10 @@ Fast-forward
 <img width="1403" alt="image" src="https://user-images.githubusercontent.com/84066151/168744690-16b8b8a6-1537-4f8d-96f3-93351c8f84c6.png">
 
 
+**That's it! You are all done !!** 
+
+**You now know the basics of Git and GitHub and the use of below commands**
+
 ## >> Quick Summary on git commands used
 
 ```
