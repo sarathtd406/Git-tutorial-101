@@ -1,4 +1,4 @@
 theme: jekyll-theme-cayman
 
-navigation:
-  - {file: "index.md", title: Home}
+plugins:
+  - jekyll-titles-from-headings
