@@ -232,7 +232,6 @@ Follow below steps to create a new repository on GitHub:
 
 1. Log in GitHub. Click on the **+** icon next to your profile picture, in the top right corner and select **New repository**
 
-
 <p align="center">
    <img width="310" alt="image" src="https://user-images.githubusercontent.com/84066151/168719629-dcee84b8-a2c5-455e-8856-81fdc1b22a3b.png">
 </p>
@@ -289,3 +288,14 @@ To https://github.com/sarathtd406/testrepo.git
 Branch 'main' set up to track remote branch 'main' from 'origin'.
 
 ```
+
+### 14. Invite collaborators to your private GitHub repository
+
+1. Log in GitHub. Navigate to your repository and click on **Settings**
+2. In the left menu click on **Collaborators**
+3. Click on **Add People** button (right side under Manage access)
+
+<img width="1403" alt="image" src="https://user-images.githubusercontent.com/84066151/168744690-16b8b8a6-1537-4f8d-96f3-93351c8f84c6.png">
+
+
+
