@@ -230,13 +230,13 @@ git revert
 
 Follow below steps to create a new repository on GitHub:
 
-1. Log in GitHub. Click on the **+** icon next to your profile picture, in the top right corner and select **New repository**
+- Log in GitHub. Click on the **+** icon next to your profile picture, in the top right corner and select **New repository**
 
 <p align="center">
    <img width="310" alt="image" src="https://user-images.githubusercontent.com/84066151/168719629-dcee84b8-a2c5-455e-8856-81fdc1b22a3b.png">
 </p>
 	
-2. Enter a name for your repository, add description, select private setting and Click on create repository
+- Enter a name for your repository, add description, select private setting and Click on create repository
 
 <img width="742" alt="image" src="https://user-images.githubusercontent.com/84066151/168720314-db424854-a521-4208-b500-8f2918ae8c0f.png">
 
@@ -289,7 +289,135 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 
 ```
 
-### 14. Invite collaborators to your private GitHub repository
+### 14. Create a new Git branch
+
+To create a new branch based upon the current HEAD. Use below command
+
+```
+$ git branch <BRANCH_NAME>
+```
+This just creates the branch. It does not switch you to that branch (HEAD stays the same)
+
+
+### 15. View Git branches
+
+To view your existing branches. Use below command
+
+```
+$ git branch
+```
+
+Look for the * which indicates the branch you are currently working on.
+
+response:
+
+```ruby
+$ git branch
+
+*  main
+   new_branch
+```
+
+### 16. Switch Branches
+
+It is always recommended to have a separate working branch to commit the daily code changes without affecting the main branch.
+
+```
+$ git checkout <NEW_BRANCH_NAME>
+```
+
+Use ```git branch``` to view whether you are pointing to the right branch. Look for the * which indicates the branch you are currently working on.
+
+response:
+
+```ruby
+$ git branch
+
+  main
+* new_branch
+```
+
+### 17. Push changes to new branch
+
+After you switch to your new branch, try modifing a file or adding a new file.
+
+Add new file
+```
+$ touch file3.txt ; echo "i am your third file" > file3.txt
+```
+
+Modifying existing file
+```
+$ echo "Modified" >> file1.txt
+```
+
+You can check the Changes that are not staged for commit using ```git status``` command. 
+
+Use ```git add -A``` command to push changes to staging area.
+
+Use ```git commit -m "second commit"``` to add message to your commit changes.
+
+Use ```git push -u origin new_branch``` to push your changes to repository.
+
+
+### 18. Create PR using GitHub GUI.
+
+After your second commit, you will see an notification as below. You can create pull request by clicking the Compare & pull request button.
+
+<img width="911" alt="image" src="https://user-images.githubusercontent.com/84066151/168761686-fc583e5e-a0a9-44bf-95b3-f3aa7e41eac4.png">
+
+GitHub opens a pull request page with the changes made to the branch as shown in below image. Here you can verify your changes and commit made.
+
+Optionally, add a comment about your pull request and click Create pull request button.
+
+<img width="1282" alt="image" src="https://user-images.githubusercontent.com/84066151/168764231-5043bc70-d4b5-422f-807e-079b2be6dc6d.png">
+
+<img width="1242" alt="image" src="https://user-images.githubusercontent.com/84066151/168764478-510621ad-3cf1-46bb-8123-0703bc64652b.png">
+
+
+**Now the repository owner, in this case, you, can review the changes and accept or reject them.**
+
+<img width="926" alt="image" src="https://user-images.githubusercontent.com/84066151/168765517-70744d70-0c3c-4f9c-be05-1b448bcbe368.png">
+
+
+**You can accept the changes in the Pull requests tab on GitHub. When you merge the branches, as a best practice delete the obsolete branch by clicking Delete branch to keep the repository clean.**
+
+<img width="937" alt="image" src="https://user-images.githubusercontent.com/84066151/168765668-e36ab00f-5965-4883-8ae6-8a1c78d97239.png">
+
+
+### 19. Synchronize Changes on your Local repository
+
+After changes megred into GitHub, it will not appear automatically in your local repository. So, you need to pull the changes to your local repository to see the updates.
+
+Synchronize your local repository with GitHub by running below command.
+
+As you have merged the changes to main branch. In your terminal you can switch to main branch first.
+```
+$ git checkout main
+```
+
+Then you can use below command to update your local repository that matches the one on GitHub.
+
+```
+$ git pull origin main
+```
+
+response:
+
+```ruby
+$ git pull origin main
+
+From https://github.com/sarathtd406/testrepo
+ * branch            main       -> FETCH_HEAD
+Updating e981c75..fd31a2f
+Fast-forward
+ file1.txt | 3 ++-
+ file4.txt | 1 +
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 file4.txt
+```
+
+### 20. Invite collaborators to your private GitHub repository
 
 1. Log in GitHub. Navigate to your repository and click on **Settings**
 2. In the left menu click on **Collaborators**
@@ -298,4 +426,23 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 <img width="1403" alt="image" src="https://user-images.githubusercontent.com/84066151/168744690-16b8b8a6-1537-4f8d-96f3-93351c8f84c6.png">
 
 
+## >> Quick Summary on git commands used
 
+```
+git --version
+git config
+git init
+git status
+git add
+git reset
+git commit
+git log
+git revert
+git remote add/rm
+git remote show
+git remote -v
+git push
+git branch
+git checkout
+git pull
+```
