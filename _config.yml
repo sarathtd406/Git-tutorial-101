@@ -1,1 +1,4 @@
 theme: jekyll-theme-cayman
+
+navigation:
+  - {file: "index.md", title: Home}
