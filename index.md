@@ -1,8 +1,9 @@
 ## Git and GitHub Basics
 
-## Adding locally hosted code to GitHub
-### Learn how to add existing source code or repositories to GitHub from the command line using GitHub CLI or Git Commands. Then, share your code and invite others to work with you.
+### Adding locally hosted code to GitHub
+#### Learn how to add existing source code or repositories to GitHub from the command line using GitHub CLI or Git Commands. Then, share your code and invite others to work with you.
 
+#### Let's get started !!
 
 ### 1. Install Git
 
@@ -41,7 +42,7 @@ Now to initialize your project, simply run
 ```
 $ git init -b main
 ```
-This will tell Git to get ready to start watching your files for every change that occurs. you will get a response that repository has been initialized: </br>
+This will tell Git to get ready to start watching your files for every change that occurs. you will get a response that repository has been initialized:
 
 ```ruby
 Initialized empty Git repository in /Users/sarathtd/project101/.git/
@@ -67,8 +68,8 @@ $ git status
 
 There are three states in Git that we need to know about.
 
-1. Working Directory </br>
-2. Staging Area — this is where we organize what we want to be committed to the repository </br>
+1. Working Directory 
+2. Staging Area — this is where we organize what we want to be committed to the repository
 3. Repository — this is our local repo
 
 <p align="center">
@@ -128,7 +129,7 @@ Changes to be committed:
 	new file:   file2.txt
 ```
 
-## Removing files from the Staging Area (Unstage)
+#### Removing files from the Staging Area (Unstage)
 
 If you want to remove files from the staging area, you can use the ```git reset``` command. For instance, if you want to remove file1.txt from the staging area:
 ```
@@ -224,15 +225,13 @@ git revert
 **Next, we will learn how to share a repository with other developers. We can do this using GitHub hosting service.**
 **GitHub allows you to keep track of your code when you're working with a team and need to modify the project's code collaboratively.**
 
-</br>
 
 ### 11. Create a New Repository on GitHub
 
-Follow these steps to create a new repository on GitHub:
+Follow below steps to create a new repository on GitHub:
 
 1. Log in GitHub. Click on the **+** icon next to your profile picture, in the top right corner and select **New repository**
 
-</br>
 
 <p align="center">
    <img width="310" alt="image" src="https://user-images.githubusercontent.com/84066151/168719629-dcee84b8-a2c5-455e-8856-81fdc1b22a3b.png">
@@ -247,7 +246,7 @@ Follow these steps to create a new repository on GitHub:
 
 ### 12. Configure the GitHub repository in your terminal
 
-Get the <REMOTE_URL> from GitHub as shown below.
+Get the REMOTE_URL from GitHub as shown below.
 
 <p align="center">
 <img width="406" alt="image" src="https://user-images.githubusercontent.com/84066151/168740828-02058777-d5b6-48f5-823b-46353920a072.png">
