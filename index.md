@@ -1,4 +1,7 @@
-## Git and GitHub Excercise
+## Git and GitHub Basics
+
+## Adding locally hosted code to GitHub
+### Learn how to add existing source code or repositories to GitHub from the command line using GitHub CLI or Git Commands. Then, share your code and invite others to work with you.
 
 
 ### 1. Install Git
@@ -36,7 +39,7 @@ Before we can do anything git-related, we must initialize a repo first!. This is
 Now to initialize your project, simply run
 
 ```
-$ git init
+$ git init -b main
 ```
 This will tell Git to get ready to start watching your files for every change that occurs. you will get a response that repository has been initialized: </br>
 
@@ -125,7 +128,7 @@ Changes to be committed:
 	new file:   file2.txt
 ```
 
-### 7. Removing files from the Staging Area (Unstage)
+## Removing files from the Staging Area (Unstage)
 
 If you want to remove files from the staging area, you can use the ```git reset``` command. For instance, if you want to remove file1.txt from the staging area:
 ```
@@ -138,9 +141,9 @@ If you want to remove all files from the staging area, you can simply type:
 $ git reset
 ```
 
-### 8. Create a Commit to repository
+### 7. Create a Commit to repository
 
-The files we need are in the staging area, let us commit them to the repository using below command.
+The files we need are in the staging area, let us commit them to the repository using below command. This Commits the tracked changes and prepares them to be pushed to a remote repository.
 
 ```
 $ git commit -m "your commit message"
@@ -151,7 +154,6 @@ $ git commit -m "your commit message"
 - **Make sure your message makes sense for future reference. It is good to be precise on exactly what changes you have made.**
 
 Our first commit
-
 
 ```ruby
 $ git commit -m "inital commit"
@@ -201,7 +203,7 @@ Use the revert command to undo changes and revert to a previous commit.
 $ git revert [hash]
 ```
 
-#### Quick Summary on git commands used
+## >> Quick Summary on git commands used
 
 ```
 git --version
@@ -215,41 +217,76 @@ git log
 git revert
 ```
 
+## GitHub
 
-### 11. Create a new remote repository in GitHub
+**Till now we learnt how to create a local repository, initialize repository, add files and commit to the repository.**
+
+**Next, we will learn how to share a repository with other developers. We can do this using GitHub hosting service.**
+**GitHub allows you to keep track of your code when you're working with a team and need to modify the project's code collaboratively.**
+
+</br>
+
+### 11. Create a New Repository on GitHub
+
+Follow these steps to create a new repository on GitHub:
+
+1. Log in GitHub. Click on the **+** icon next to your profile picture, in the top right corner and select **New repository**
+
+</br>
+
+<p align="center">
+   <img width="310" alt="image" src="https://user-images.githubusercontent.com/84066151/168719629-dcee84b8-a2c5-455e-8856-81fdc1b22a3b.png">
+</p>
+	
+2. Enter a name for your repository, add description, select private setting and Click on create repository
+
+<img width="742" alt="image" src="https://user-images.githubusercontent.com/84066151/168720314-db424854-a521-4208-b500-8f2918ae8c0f.png">
+
+<img width="738" alt="image" src="https://user-images.githubusercontent.com/84066151/168720393-e1495adc-fe31-4697-880f-1866ac3b1b40.png">
 
 
+### 12. Configure the GitHub repository in your terminal
 
+Get the <REMOTE_URL> from GitHub as shown below.
 
+<p align="center">
+<img width="406" alt="image" src="https://user-images.githubusercontent.com/84066151/168740828-02058777-d5b6-48f5-823b-46353920a072.png">
+</p>
 
-### Markdown
+In Terminal, add the URL for the remote repository where your local repository will be pushed. Below command sets the new remote repository.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+$ git remote add origin  <REMOTE_URL>
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+Below command verifies the new remote repository URL
 
-### Jekyll Themes
+```ruby
+$ git remote -v
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sarathtd406/Git-tutorial-101/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+origin	https://github.com/sarathtd406/testrepo.git (fetch)
+origin	https://github.com/sarathtd406/testrepo.git (push)
+```
 
-### Support or Contact
+### 13. Push the changes in your local repository to GitHub.com
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Below command pushes the changes in your local repository up to the remote repository you specified as the origin.
+
+```
+$ git push -u origin main
+```
+
+respose:
+
+```ruby
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 286 bytes | 286.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/sarathtd406/testrepo.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+```
