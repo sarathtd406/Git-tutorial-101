@@ -428,7 +428,7 @@ Fast-forward
 
 **That's it! You are all done !!** 
 
-**You now know the basics of Git and GitHub and the use of below commands**
+**You now know the basics of Git and GitHub and how and when to use below commands**
 
 ## >> Quick Summary on git commands used
 
